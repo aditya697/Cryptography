@@ -86,5 +86,8 @@ By using the following program we get the flag.
 
 ## *Encoding Challenge*
 
-We are given a .py file. 
+We are given a .py file. If we rreach 100th level we will get the flag.
+
+# ***XOR***
+
 
