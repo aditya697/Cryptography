@@ -1,33 +1,41 @@
 # ***CRYPTOHACKS***
 
-# ***INTRODUCTION***
+## ***INTRODUCTION***
 
 ### *Finding Flag*
 
 The flag is given in the question.
+
 ```FLAG:- crypto{y0ur_f1rst_fl4g)```
 
-#Great snakes
-By running the program we get the flag.
-FLAG:- crypto{z3n_0f_pyth0n}
+### *Great snakes*
 
-#Networks Attacks
+By running the program we get the flag.
+
+```FLAG:- crypto{z3n_0f_pyth0n}```
+
+### *Networks Attacks*
+
 We are given a .py file.
 If we change buy:clothes to buy:flags and run the program we will get the answer.
-FLAG:- crypto{sh0pp1ng_f0r_fl4g5}
 
-#GENERAL
+```FLAG:- crypto{sh0pp1ng_f0r_fl4g5}```
 
-#ASCII
+## ***GENERAL***
+
+### *ASCII*
+
 We are given a list of ascii value if we convert them into text we get the flag.
 
-ini_list = [99, 114, 121, 112, 116, 111, 123, 65, 83, 67, 73, 73, 95, 112, 114, 49, 110, 116, 52, 98, 108, 51, 125]  
+```ini_list = [99, 114, 121, 112, 116, 111, 123, 65, 83, 67, 73, 73, 95, 112, 114, 49, 110, 116, 52, 98, 108, 51, 125]  
 res = "" 
 for val in ini_list: 
     res = res + chr(val) 
-print ("Resultant string", str(res))
+print ("Resultant string", str(res))```
+
 using this program we get the flag
-FLAG:- crypto{ASCII_pr1nt4bl3}
+
+```FLAG:- crypto{ASCII_pr1nt4bl3}```
 
 #HEX
 We are given a hex string. To get the flag we should decode from hex. We can use .decode('hex')
