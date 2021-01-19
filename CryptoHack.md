@@ -90,4 +90,17 @@ We are given a .py file. If we rreach 100th level we will get the flag.
 
 # ***XOR***
 
+## *XOR Starter*
 
+We are given a word. And that word is XORed with 13.
+So we conver word in binary then XOR with binary of 13. We get the flag
+```
+data = "label"
+flag = ''
+for c in data:
+    flag += chr(ord(c) ^ 13)
+print(flag)
+```
+Since the flag mentioned is crypto{string}.
+
+```FLAG:- crypto{aloha}```
