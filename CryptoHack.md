@@ -156,3 +156,32 @@ for s in result.values():
  
 ```FLAG:-crypto{0x10_15_my_f4v0ur173_by7e}```
 
+## *You either know, XOR you don't*
+
+We are given a hex,which we have to decode.
+Here the key length is unkown,So we have to brute to get the flag.
+But we know we know the starting few words of the Flag. 
+By using we can find that we can find the flag. By using this program
+```
+def brute(input, key):
+    if len(input) != len(key):
+        return "Failed!"
+
+    output = b''
+    for b1, b2 in zip(input, key):
+        output += bytes([b1 ^ b2])
+    try:
+        return output.decode("utf-8")
+    except:
+        return "Cannot Decode some bytes"
+
+cipher = bytearray.fromhex("0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104")
+key_part = brute(cipher[:7], "crypto{".encode())
+key = (key_part + "y").encode()
+key += key * int((len(cipher) - len(key))/len(key))
+key += key[:((len(cipher) - len(key))%len(key))]
+plain = brute(cipher, key)
+print(plain)
+```
+
+```FLAG:-crypto{1f_y0u_Kn0w_En0uGH_y0u_Kn0w_1t_4ll}```
