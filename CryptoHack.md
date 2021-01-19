@@ -124,3 +124,34 @@ flag = k1 ^ k2_3 ^ flag
 print(codecs.decode(('%x' %flag),'hex_codec'))
 ```
 ```FLAG:- crypto{x0r_i5_ass0c1at1v3}```
+
+## *Favorite Bytes*
+
+We are given a hex,which we have decode.
+Then since it is single byte xor the length of the key is 1.
+Therefore we can say there will be 256 that we try and xor to get the flag.
+By using the the code we can find the flag.
+```
+def single_byte_xor(input, key):
+    if len(chr(key)) != 1:
+      raise "KEY LENGTH EXCEPTION: In single_byte_xor key must be 1 byte long!"
+
+    output = b''
+    for b in input:
+        output += bytes([b ^ key])
+
+    try:
+        return output.decode("utf-8")
+    except:
+        return "Cannot Decode some bytes"
+
+decoded = bytearray.fromhex("73626960647f6b206821204f21254f7d694f7624662065622127234f726927756d")
+result = {}
+for i in range(256):
+    result[i] = (single_byte_xor(decoded, i))
+for s in result.values():
+    if ("crypto" in s):
+        print(s)
+```
+ 
+```**FLAG:-crypto{0x10_15_my_f4v0ur173_by7e}**``
