@@ -154,4 +154,5 @@ for s in result.values():
         print(s)
 ```
  
-```**FLAG:-crypto{0x10_15_my_f4v0ur173_by7e}**```
+```FLAG:-crypto{0x10_15_my_f4v0ur173_by7e}```
+
