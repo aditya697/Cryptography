@@ -1,4 +1,4 @@
-#INTRODUNCTION
+```INTRODUCTION```
 
 #Fing Flag
 The flag is given in the question.
@@ -58,5 +58,7 @@ By using the following program we get the flag.
 
 FLAG:- crypto{3nc0d1n6_4ll_7h3_w4y_d0wn}
 
+#Encoding Challenge
 
+We are given a .py file. 
 
