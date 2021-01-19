@@ -104,3 +104,23 @@ print(flag)
 Since the flag mentioned is crypto{string}.
 
 ```FLAG:- crypto{aloha}```
+
+## *XOR Properties*
+
+We are given
+```
+>>>KEY1 = a6c8b6733c9b22de7bc0253266a3867df55acde8635e19c73313
+>>>KEY2 ^ KEY1 = 37dcb292030faa90d07eec17e3b1c6d8daf94c35d4c9191a5e1e
+>>>KEY2 ^ KEY3 = c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1
+>>>FLAG ^ KEY1 ^ KEY3 ^ KEY2 = 04ee9855208a2cd59091d04767ae47963170d1660df7f56f5faf
+```
+We have to first decode from hex.By using the program we can get the flag coverting into hex.
+```
+import codecs
+k1 = int('a6c8b6733c9b22de7bc0253266a3867df55acde8635e19c73313', 16)
+k2_3 = int('c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1', 16)
+flag = int('04ee9855208a2cd59091d04767ae47963170d1660df7f56f5faf',16)
+flag = k1 ^ k2_3 ^ flag
+print(codecs.decode(('%x' %flag),'hex_codec'))
+```
+```FLAG:- crypto{x0r_i5_ass0c1at1v3}```
