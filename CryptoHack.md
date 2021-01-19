@@ -2,7 +2,7 @@
 
 # ***INTRODUCTION***
 
-### *Fing Flag*
+### *Finding Flag*
 
 The flag is given in the question.
 ```FLAG:- crypto{y0ur_f1rst_fl4g)```
