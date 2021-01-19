@@ -1,8 +1,11 @@
-#INTRODUCTION
+# ***CRYPTOHACKS***
 
-#Fing Flag
+# ***INTRODUCTION***
+
+### *Fing Flag*
+
 The flag is given in the question.
-FLAG:- crypto{y0ur_f1rst_fl4g}
+```FLAG:- crypto{y0ur_f1rst_fl4g)```
 
 #Great snakes
 By running the program we get the flag.
