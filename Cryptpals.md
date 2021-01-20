@@ -97,3 +97,7 @@ By encoding the bytes into hex we get desired ouput
 >>> b'\x0b67\'*+.cb,.ii*#i:*<c$ -b=c4<*&"c$\'\'e\'*(+/ i\ne.,e*1$3:e>+ \'c\x0ci+ (1e(c&0.\'(/'.encode('hex')
 '0b3637272a2b2e63622c2e69692a23693a2a3c6324202d623d63343c2a26226324272765272a282b2f20690a652e2c652a3124333a653e2b2027630c692b20283165286326302e27282f'
 ```
+## *CHALLENGE7*(AES in ECB mode)
+ We are given a text file and we are the given ```key:-YELLOW SUBMARINE```
+ 
+ In ###**AES Encryption**### the key size can be 16,32,48 . So here in our case the key lenght is 16.
