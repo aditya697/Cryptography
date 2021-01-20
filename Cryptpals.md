@@ -14,7 +14,7 @@ byte_array = bytearray.fromhex("49276d206b696c6c696e6720796f757220627261696e206c
 print(base64.b64encode(byte_array))
 ```
 
-## *CHALLENGE2*(Fixed XOR)
+### *CHALLENGE2*(Fixed XOR)
 
 We are given to strings in hex.
 
@@ -42,7 +42,7 @@ By encoding this string as hex we get the ouput.
 '746865206b696420646f6e277420706c6179'
 ```
 
-## *CHALLENGE3*(Single-byte XOR cipher)
+### *CHALLENGE3*(Single-byte XOR cipher)
 
 We are given a hex,which we have to decode to get the mssg.
 
@@ -71,7 +71,7 @@ for s in result.values():
 
 The message is ```Cooking MC's like a pound of bacon```.
 
-## *CHALLENGE5*(Implement repeating-key XOR)
+### *CHALLENGE5*(Implement repeating-key XOR)
 
 We are given ```text:- Burning 'em, if you ain't quick and nimble I go crazy when I hear a cymbal``` 
 and ```key:- ICE```. 
@@ -97,7 +97,7 @@ By encoding the bytes into hex we get desired ouput
 >>> b'\x0b67\'*+.cb,.ii*#i:*<c$ -b=c4<*&"c$\'\'e\'*(+/ i\ne.,e*1$3:e>+ \'c\x0ci+ (1e(c&0.\'(/'.encode('hex')
 '0b3637272a2b2e63622c2e69692a23693a2a3c6324202d623d63343c2a26226324272765272a282b2f20690a652e2c652a3124333a653e2b2027630c692b20283165286326302e27282f'
 ```
-## *CHALLENGE7*(AES in ECB mode)
+### *CHALLENGE7*(AES in ECB mode)
  We are given a text file and we are the given ```key:-YELLOW SUBMARINE```
  
  In **AES Encryption/Decryption** the key size can be 16,32,48 . So here in our case the key lenght is 16.
