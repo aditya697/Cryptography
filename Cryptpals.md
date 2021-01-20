@@ -1,6 +1,6 @@
 # ***SET1*** 
 
-## *CHALLENGE1*
+## *CHALLENGE1*(Convert hex to base64)
 
 We are a given,which should decoded from hex.
 Then we have to do b64encoding to get the desired
@@ -14,7 +14,7 @@ byte_array = bytearray.fromhex("49276d206b696c6c696e6720796f757220627261696e206c
 print(base64.b64encode(byte_array))
 ```
 
-## *CHALLENGE2*
+## *CHALLENGE2*(Fixed XOR)
 
 We are given to strings in hex.
 
@@ -42,7 +42,7 @@ By encoding this string as hex we get the ouput.
 '746865206b696420646f6e277420706c6179'
 ```
 
-## *CHALLENGE3*
+## *CHALLENGE3*(Single-byte XOR cipher)
 
 We are given a hex,which we have to decode to get the mssg.
 
@@ -71,7 +71,7 @@ for s in result.values():
 
 The message is ```Cooking MC's like a pound of bacon```.
 
-# *CHALLENGE5*
+## *CHALLENGE5*(Implement repeating-key XOR)
 
 We are given ```text:- Burning 'em, if you ain't quick and nimble I go crazy when I hear a cymbal``` 
 and ```key:- ICE```. 
