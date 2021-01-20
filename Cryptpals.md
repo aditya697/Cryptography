@@ -71,4 +71,29 @@ for s in result.values():
 
 The message is ```Cooking MC's like a pound of bacon```.
 
+# *CHALLENGE5*
 
+We are given ```text:- Burning 'em, if you ain't quick and nimble I go crazy when I hear a cymbal``` 
+and ```key:- ICE```. 
+
+So we should xor with the text with key using the same key repeatedly.
+```
+def fixed_xor(bytes1, bytes2):
+    assert len(bytes1) == len(bytes2)
+    return bytes().join([bytes([a ^ b]) for a, b in zip(bytes1, bytes2)])
+
+def repeating_key_xor(text, key):
+    expanded_key = bytearray()
+    for i in range(len(text)):
+        expanded_key.append(key[i % len(key)])
+    return fixed_xor(text, expanded_key)
+
+print(repeating_key_xor(b"Burning 'em, if you ain't quick and nimble I go crazy when I hear a cymbal", b"ICE"))
+```
+We will get Bytes are using this program.
+```b'\x0b67\'*+.cb,.ii*#i:*<c$ -b=c4<*&"c$\'\'e\'*(+/ i\ne.,e*1$3:e>+ \'c\x0ci+ (1e(c&0.\'(/'.encode('hex')```
+By encoding the bytes into hex we get desired ouput
+```
+>>> b'\x0b67\'*+.cb,.ii*#i:*<c$ -b=c4<*&"c$\'\'e\'*(+/ i\ne.,e*1$3:e>+ \'c\x0ci+ (1e(c&0.\'(/'.encode('hex')
+'0b3637272a2b2e63622c2e69692a23693a2a3c6324202d623d63343c2a26226324272765272a282b2f20690a652e2c652a3124333a653e2b2027630c692b20283165286326302e27282f'
+```
