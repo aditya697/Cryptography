@@ -47,7 +47,8 @@ By encoding this string as hex we get the ouput.
 We are given a hex,which we have to decode to get the mssg.
 
 By using the program we outputs from that we will have meaningfull message that is readable.
-```def single_byte_xor(input, key):
+```
+def single_byte_xor(input, key):
     if len(chr(key)) != 1:
       raise "KEY LENGTH EXCEPTION: In single_byte_xor key must be 1 byte long!"
 
