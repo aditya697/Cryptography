@@ -11,3 +11,25 @@ Then we have to do BASE32 decoding, we get hex```69 6e 63 74 66 6a 7b 62 34 73 3
 By decoding from hex we get the flag.
 
 ```FLAG:-inctfj{b4s3s_4r3_c00000000l}```
+
+# ***VINEGAR_V1***
+
+We are given a cipher text. ```ciphertext:-ioeqdi{siwcdke_tjrdelf_uesefmg}```
+Since the question says poured with ``abcxyz`` i.e the key.
+
+By using the program we can get the flag
+```
+def decrypt(ciphertext, key):
+    key_length = len(key)
+    key_as_int = [ord(i) for i in key]
+    ciphertext_int = [ord(i) for i in ciphertext]
+    plaintext = ''
+    for i in range(len(ciphertext_int)):
+        value = (ciphertext_int[i] - key_as_int[i % key_length]) % 26
+        plaintext += chr(value + 0x61)
+    return plaintext
+
+print(decrypt("ioeqdisiwcdketjrdelfuesefmg", "abcxyz"))
+```
+
+```FLAG:-inctfj{shuffle_shuffle_shuffle}```
