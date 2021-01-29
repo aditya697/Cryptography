@@ -68,3 +68,18 @@ Predict Bob's key
 flag{5n1ff3r5_1n_7h3_h0u53!!}
 ```
 ```FLAG:-flag{5n1ff3r5_1n_7h3_h0u53!!}```
+
+# ***Naïve Cipher***
+
+We are given decoded strings which is rotated.By using rot13 method we can the flag.
+
+By using the code we can get the flag by checking the start of the flag in the output i.e inctfj
+```
+def caesar(s, r, t = 0x61):
+    return "".join([chr(t + (((ord(c) - t) + r) % 26)) for c in s])
+content = "dixoaeoczzoczhvnozmjaxvznzmxdkczm}"
+for rotation in range(1, 27):
+    print("rot {:d}: {:s}".format(rotation, caesar(content, rotation)))
+```
+
+```FLAG:-inctfj{thee_the_master_of_caeser_cipher}```
