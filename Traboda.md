@@ -99,3 +99,5 @@ for i in range(5):
     tmp = str(b64decode(bytearray.fromhex(tmp[2:-1])))
 print(tmp)
 ```
+
+```FLAG:-inctfj{Y0u_@re_Qu1t3_th3_D3c0d3r}```
