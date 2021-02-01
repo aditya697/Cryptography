@@ -10,7 +10,7 @@ Then we have to do BASE32 decoding, we get hex```69 6e 63 74 66 6a 7b 62 34 73 3
 
 By decoding from hex we get the flag.
 
-```FLAG:-inctfj{b4s3s_4r3_c00000000l}```
+***```FLAG:-inctfj{b4s3s_4r3_c00000000l}```***
 
 # ***VINEGAR_V1***
 
@@ -32,7 +32,7 @@ def decrypt(ciphertext, key):
 print(decrypt("ioeqdisiwcdketjrdelfuesefmg", "abcxyz"))
 ```
 
-```FLAG:-inctfj{shuffle_shuffle_shuffle}```
+***```FLAG:-inctfj{shuffle_shuffle_shuffle}```***
 
 # ***VINEGAR-V2***
 
@@ -40,7 +40,7 @@ We are given a cipher text. ```ciphertext:-wecgln{mfu_pgr_rvcbji_hyif_qimcefy}``
 
 Here we are not given the key. So the using this online tool we can get the flag ```https://www.boxentriq.com/code-breaking/vigenere-cipher```
 
-```FLAG:-inctfj{you_can_decode_this_keyless}```
+***```FLAG:-inctfj{you_can_decode_this_keyless}```***
 
 # ***DH_MITM***
 We are given a port and .py file. By seeing we can understand that,
@@ -67,7 +67,7 @@ Predict Bob's key
 1
 flag{5n1ff3r5_1n_7h3_h0u53!!}
 ```
-```FLAG:-flag{5n1ff3r5_1n_7h3_h0u53!!}```
+***```FLAG:-flag{5n1ff3r5_1n_7h3_h0u53!!}```***
 
 # ***Naïve Cipher***
 
@@ -82,7 +82,7 @@ for rotation in range(1, 27):
     print("rot {:d}: {:s}".format(rotation, caesar(content, rotation)))
 ```
 
-```FLAG:-inctfj{thee_the_master_of_caeser_cipher}```
+***```FLAG:-inctfj{thee_the_master_of_caeser_cipher}```***
 
 # ***MULTI ENCODER***
 
@@ -100,7 +100,7 @@ for i in range(5):
 print(tmp)
 ```
 
-```FLAG:-inctfj{Y0u_@re_Qu1t3_th3_D3c0d3r}```
+***```FLAG:-inctfj{Y0u_@re_Qu1t3_th3_D3c0d3r}```***
 
 # ***SINGLE BYTE XOR-1***
 
@@ -118,7 +118,7 @@ for xor_key in range(256):
                 print(decoded, end="")
 print()
 ```
-```FLAG:-inctfj{x0r_c4n't_b3_e4sily_br0k3n}```
+***```FLAG:-inctfj{x0r_c4n't_b3_e4sily_br0k3n}```***
 
 # ***GOD_OF_SMALL_THINGS***
 
