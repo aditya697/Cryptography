@@ -101,3 +101,19 @@ print(tmp)
 ```
 
 ```FLAG:-inctfj{Y0u_@re_Qu1t3_th3_D3c0d3r}```
+
+# ***SINGLE BYTE XOR-1***
+
+We are given hex encoded string ``1314190e1c1001024a0825194e145d0e251849251f4e091316032518084a11491407``, which is xored with "z".
+By using the follow we can get the flag.
+
+```
+x = "1314190e1c1001024a0825194e145d0e251849251f4e091316032518084a11491407"
+byte_array = bytearray.fromhex(x)
+for xor_key in range(256):
+    decoded = ''.join(chr(a ^ xor_key) for a in byte_array)
+    if decoded.isprintable():
+        if xor_key == 122:
+            print(decoded)
+```
+```FLAG:-inctfj{x0r_c4n't_b3_e4sily_br0k3n}```
