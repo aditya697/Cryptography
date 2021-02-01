@@ -111,9 +111,11 @@ By using the follow we can get the flag.
 x = "1314190e1c1001024a0825194e145d0e251849251f4e091316032518084a11491407"
 byte_array = bytearray.fromhex(x)
 for xor_key in range(256):
-    decoded = ''.join(chr(a ^ xor_key) for a in byte_array)
-    if decoded.isprintable():
-        if xor_key == 122:
-            print(decoded)
+    for i in byte_array:
+        decoded = ''.join(chr(i ^ xor_key))
+        if decoded.isprintable():
+            if xor_key == 122:
+                print(decoded, end="")
+print()
 ```
 ```FLAG:-inctfj{x0r_c4n't_b3_e4sily_br0k3n}```
