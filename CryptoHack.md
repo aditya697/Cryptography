@@ -241,3 +241,40 @@ d = inverse(65537, e)
 print(pow(c,d,n))
 ```
 ```FLAG:-crypto{13371337}```
+
+## ***PRIMES PART 1***
+
+### *FACTORING*
+
+We are given a number. We are asked divide into 2 primes.
+We can use factordb to get the primes.
+
+```FLAG:-crypto{19704762736204164635843,25889363174021185185929}```
+
+### *INFERIOUS PRIME*
+
+We are given output.txt and and .py files. In the output file we are given c,e,n.
+
+By getting primes of n and by using this code we get the flag.
+```
+import gmpy2
+import codecs
+
+if __name__ == '__main__':
+    c = 39207274348578481322317340648475596807303160111338236677373
+    n = 742449129124467073921545687640895127535705902454369756401331
+    e = 3
+
+    p = 752708788837165590355094155871
+    q = 986369682585281993933185289261
+
+    l = gmpy2.lcm(p-1, q-1)
+    gcd, u, v = gmpy2.gcdext(e, l)
+
+    while u < 0:
+        u += l
+    m = pow(c, u, n)
+    print(m)
+    print(codecs.decode(('%x'%m),'hex_codec'))
+```
+```FLAG:-crypto{N33d_b1g_pR1m35}```
