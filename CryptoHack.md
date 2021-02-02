@@ -53,7 +53,7 @@ We get the using the code.
 
 ```FLAG:- crypto{You_will_be_working_with_hex_strings_a_lot}```
 
-## *Base64*
+### *Base64*
 
 We are given a hex string. First we have to decode from hex.
 
@@ -69,7 +69,7 @@ b64encode(byte_arr)
 
 ```FLAG:-crypto/Base+64+Encoding+is+Web+Safe/```
 
-## *Bytes to Big Integers*
+### *Bytes to Big Integers*
 
 We are given long integers.
 
@@ -84,13 +84,13 @@ By using the following program we get the flag.
 
 ```FLAG:- crypto{3nc0d1n6_4ll_7h3_w4y_d0wn}```
 
-## *Encoding Challenge*
+### *Encoding Challenge*
 
 We are given a .py file. If we rreach 100th level we will get the flag.
 
-# ***XOR***
+## ***XOR***
 
-## *XOR Starter*
+### *XOR Starter*
 
 We are given a word. And that word is XORed with 13.
 So we conver word in binary then XOR with binary of 13. We get the flag
@@ -125,7 +125,7 @@ print(codecs.decode(('%x' %flag),'hex_codec'))
 ```
 ```FLAG:- crypto{x0r_i5_ass0c1at1v3}```
 
-## *Favorite Bytes*
+### *Favorite Bytes*
 
 We are given a hex,which we have decode.
 Then since it is single byte xor the length of the key is 1.
@@ -156,7 +156,7 @@ for s in result.values():
  
 ```FLAG:-crypto{0x10_15_my_f4v0ur173_by7e}```
 
-## *You either know, XOR you don't*
+### *You either know, XOR you don't*
 
 We are given a hex,which we have to decode.
 Here the key length is unkown,So we have to brute to get the flag.
@@ -186,9 +186,11 @@ print(plain)
 
 ```FLAG:-crypto{1f_y0u_Kn0w_En0uGH_y0u_Kn0w_1t_4ll}```
 
-# *RSA*
+# ***RSA***
 
-## *RSA STARTER 1*
+## ***STARTER***
+
+### *RSA STARTER 1*
  
  We are asked to find ``101^17 mod 22663``
  
@@ -196,19 +198,19 @@ print(plain)
  
  ```FLAG:-crypto{19906}```
  
- ## *RSA STARTER 2*
+ ### *RSA STARTER 2*
  
  We are given number,exponent,p,q. By doing pxq we get n. Then by using ```pow(12,65537,391)```.
  
 ```FLAG:-crypto{301}```
 
-## *RSA STARTER 3*
+### *RSA STARTER 3*
 
 We given p and q. We have to find euler's totient. ```e = (p-1) x (q-1)```
 
 ```FLAG:-crypto{882564595536224140639625987657529300394956519977044270821168}```
 
-## *RSA STARTER 4*
+### *RSA STARTER 4*
 
 We are given p,q and e. We have to do find "d".
 
@@ -223,7 +225,7 @@ print(d)
 ```
 ```FLAG:-crypto{121832886702415731577073962957377780195510499965398469843281}```
 
-## *RSA STARTER 5*
+### *RSA STARTER 5*
 
 We are given n,e and c. We have to decrypt cipher using d.
 
