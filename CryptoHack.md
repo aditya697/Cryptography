@@ -335,7 +335,7 @@ print(codecs.decode(('%x'%m),'hex_codec'))
 
 ### *SALTY*
 
-We are given a output.txt. In this the exponent is small e = 1
+We are given a output.txt. In this the exponent is small e = 1 and n,ciphertext.
  
 By using this code we get the flag.
 ```
@@ -353,7 +353,7 @@ print(long_to_bytes(pow(ct, d, n)))
 
 ### *MODULUS_UNUTILIS*
 
-We are given a output.txt.
+We are given a output.txt. We are given n,e,cipher text.
 
 By using this code we get the flag.
 ```
@@ -375,7 +375,7 @@ print(codecs.decode(('%x'%root),'hex_codec'))
 
 ### *EVERYTHING IS BIG*
 
-We are given a output.txt.
+We are given a output.txt. We are given n,e,cipher text.
 
 By using this code we get the flag.
 ```
