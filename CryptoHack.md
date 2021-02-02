@@ -185,3 +185,57 @@ print(plain)
 ```
 
 ```FLAG:-crypto{1f_y0u_Kn0w_En0uGH_y0u_Kn0w_1t_4ll}```
+
+# *RSA*
+
+## *RSA STARTER 1*
+ 
+ We are asked to find ``101^17 mod 22663``
+ 
+ By using ``pow(101,17,22663)``.
+ 
+ ```FLAG:-crypto{19906}```
+ 
+ ## *RSA STARTER 2*
+ 
+ We are given number,exponent,p,q. By doing pxq we get n. Then by using ```pow(12,65537,391)```.
+ 
+```FLAG:-crypto{301}```
+
+## *RSA STARTER 3*
+
+We given p and q. We have to find euler's totient. ```e = (p-1) x (q-1)```
+
+```FLAG:-crypto{882564595536224140639625987657529300394956519977044270821168}```
+
+## *RSA STARTER 4*
+
+We are given p,q and e. We have to do find "d".
+
+By using the code we get the flag.
+```
+from Crypto.Util.number import inverse
+p = 857504083339712752489993810777
+q = 1029224947942998075080348647219
+e = (p-1) * (q-1)
+d = inverse(65537, e)
+print(d)
+```
+```FLAG:-crypto{121832886702415731577073962957377780195510499965398469843281}```
+
+## *RSA STARTER 5*
+
+We are given n,e and c. We have to decrypt cipher using d.
+
+By using the code we can get the flag.
+```
+from Crypto.Util.number import inverse
+c = 77578995801157823671636298847186723593814843845525223303932
+n = 882564595536224140639625987659416029426239230804614613279163
+p = 857504083339712752489993810777
+q = 1029224947942998075080348647219
+e = (p-1) * (q-1)
+d = inverse(65537, e)
+print(pow(c,d,n))
+```
+```FLAG:-crypto{13371337}```
