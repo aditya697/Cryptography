@@ -241,7 +241,7 @@ We have to calculate ``273246787654^65536 mod 65537``
 
 By using **`print(pow(273246787654,65536,65537))`** we get `1`
 
-*```FLAG:-1```*
+*```FLAG:- 1```*
 
 # ***RSA***
 
