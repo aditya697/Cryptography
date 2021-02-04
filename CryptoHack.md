@@ -186,6 +186,40 @@ print(plain)
 
 *```FLAG:-crypto{1f_y0u_Kn0w_En0uGH_y0u_Kn0w_1t_4ll}```*
 
+## ***MATHEMATICS***
+
+### *GREATEST COMMON FACTOR*
+
+We are asked to find gcd of a = 66528, b = 52920.
+
+By using this we can find
+```
+import math
+a = 66528 
+b = 52920
+print(math.gcd(a,b))
+```
+*```1512```*
+
+### *EXTENDED GCD*
+
+We are asked to find u,v using euclid's gcd method.
+
+By using the code we can get the answer.
+```
+def egcd(a, b):
+    x,y, u,v = 0,1, 1,0
+    while a != 0:
+        q, r = b//a, b%a
+        m, n = x-u*q, y-v*q
+        b,a, x,y, u,v = a,r, u,v, m,n
+    gcd = b
+    return gcd, x, y
+
+print(egcd(26513,323
+```
+*```FLAG:-crypto{10245,-8404}```*
+
 # ***RSA***
 
 ## ***STARTER***
