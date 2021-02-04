@@ -513,7 +513,7 @@ if __name__ == '__main__':
 ```
 *```FLAG:-crypto{s0m3th1ng5_c4n_b3_t00_b1g}```*
 
-## *	PRIMES PART 2*
+## *PRIMES PART 2*
 
 We are given a file output.txt. we are given n,e,cipher text. we have find p and q using given n.
 
