@@ -243,6 +243,14 @@ By using **`print(pow(273246787654,65536,65537))`** we get `1`
 
 *```FLAG:- 1```*
 
+### *MODULAR INVERSE*
+
+We have to find d from ``3 * d ≡ 1 mod 13``.
+
+We can find it using **``print(pow(3, -1, 13))``**
+
+*```FLAG:- 9```*
+
 # ***RSA***
 
 ## ***STARTER***
