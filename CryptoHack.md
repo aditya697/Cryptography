@@ -220,6 +220,21 @@ print(egcd(26513,323
 ```
 *```FLAG:-crypto{10245,-8404}```*
 
+### *MODULAR ARITHMETIC 1*
+
+We have find a,b from 
+```
+11 ≡ a mod 6
+8146798528947 ≡ b mod 17
+```
+By doing print(11 % 6) we get 5.
+
+By doing print(8146798528947 % 17) we get 4.
+
+The question asnwer is the smaller number of a and b.
+
+*```FLAG:- 4```*
+
 ### *MODULAR ARITHMETIC 2*
 
 We have to calculate ``273246787654^65536 mod 65537``
