@@ -220,6 +220,14 @@ print(egcd(26513,323
 ```
 *```FLAG:-crypto{10245,-8404}```*
 
+### *MODULAR ARITHMETIC 2*
+
+We have to calculate ``273246787654^65536 mod 65537``
+
+By using **`print(pow(273246787654,65536,65537))`** we get `1`
+
+*```FLAG:-1```*
+
 # ***RSA***
 
 ## ***STARTER***
